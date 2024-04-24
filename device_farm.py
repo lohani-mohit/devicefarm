@@ -47,13 +47,13 @@ client = boto3.client('devicefarm', 'us-west-2')
 response = client.list_device_pools(
     type='PRIVATE',
     # You can get the project ARN by using the list-projects CLI command.
-    arn='arn:aws:devicefarm:us-west-2:344041258662:project:ff697fda-f9e5-4341-9ef5-7a03b1f35a32'
+    arn=<YOUR_ARN>
 )
 pprint(response)
 
 To get all testspec arn
 response = client.list_uploads(
-    arn='arn:aws:devicefarm:us-west-2:344041258662:project:ff697fda-f9e5-4341-9ef5-7a03b1f35a32',
+    arn=<YOUR_ARN>,
     type='APPIUM_PYTHON_TEST_SPEC')
 pprint(response)
 
